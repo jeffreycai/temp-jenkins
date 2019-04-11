@@ -1,9 +1,5 @@
 #!/usr/bin/env groovy
 
-properties(
-  [buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '30', numToKeepStr: '50')), [$class: 'RebuildSettings', autoRebuild: false, rebuildDisabled: false], pipelineTriggers([])]
-)
-
 node {
     stage('Checkout') {
         checkout scm
