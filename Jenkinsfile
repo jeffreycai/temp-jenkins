@@ -7,11 +7,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                docker ps -a
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+                cim --version
             }
         }
         stage('Deploy') {
