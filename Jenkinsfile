@@ -7,6 +7,7 @@ node {
         }
         stage('Deploy') {
             sh 'docker ps'
+            sh 'cim --version'
         }
     }
 }
