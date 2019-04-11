@@ -5,6 +5,9 @@ node {
         stage('Test') {
             sh 'cim --version'
         }
+        stage('Deploy') {
+            sh 'docker ps'
+        }
     }
 }
 
