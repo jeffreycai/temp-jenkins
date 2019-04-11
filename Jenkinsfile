@@ -2,12 +2,14 @@
 
 node {
     docker.image('3musketeers').inside {
-        stage('Test') {
-            sh 'cim --version'
+        stage('Checkout') {
+            checkout scm
         }
-        stage('Deploy') {
-            sh 'docker ps'
-            sh 'cim --version'
+        stage('Build') {
+            sh 'docker build . -t "helloworld"'
+        }
+        stage('Run') {
+            sh 'docker run --rm helloworld'
         }
     }
 }
