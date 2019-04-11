@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image '3muskteers' }
+        docker { image '3musketeers' }
     }
 
     stages {
