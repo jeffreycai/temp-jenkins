@@ -1,5 +1,7 @@
 pipeline {
-    agent { docker }
+    agent {
+        docker { image '3muskteers' }
+    }
 
     stages {
         stage('Build') {
