@@ -1,6 +1,15 @@
 #!/usr/bin/env groovy
 
 node {
+    docker.image('3musketeers').inside {
+        stage('Test') {
+            sh 'cim --version'
+        }
+    }
+}
+
+/*
+node {
     stage('Checkout') {
         checkout scm
 
@@ -12,3 +21,4 @@ node {
     }
 
 }
+*/
