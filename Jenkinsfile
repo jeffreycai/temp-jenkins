@@ -25,7 +25,6 @@ node {
 
 }
 
-
 /*
 node {
     docker.image('3musketeers').inside {
